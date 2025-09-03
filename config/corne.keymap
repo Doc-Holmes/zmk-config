@@ -20,13 +20,13 @@
           >;
         };
 
-//  navigation { // Layer 1
-//          display-name = "Navigation";
-//          bindings = <
-//          &none &none &none &kp HOME &kp PAGE_UP &none &kp CARET &none &none &kp DOLLR &none &kp BACKSPACE &none &kp TILDE &kp DOUBLE_QUOTES &kp END &kp PAGE_DOWN &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &kp DELETE &kp LEFT_CONTROL &none &none &kp LEFT_SHIFT &kp LEFT_GUI &none &none &none &none &none &none &none &kp SPACE &kp ENTER &mo 3 &trans &none &none
-//          >;
-//        };
-//
+  navigation { // Layer 1
+          display-name = "Navigation";
+          bindings = <
+          &none &none &none &kp HOME &kp PAGE_UP &none &kp CARET &none &none &kp DOLLR &none &kp BACKSPACE &none &kp TILDE &kp DOUBLE_QUOTES &kp END &kp PAGE_DOWN &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &kp DELETE &kp LEFT_CONTROL &none &none &kp LEFT_SHIFT &kp LEFT_GUI &none &none &none &none &none &none &none &kp SPACE &kp ENTER &mo 3 &trans &none &none
+          >;
+        };
+
 //  symbol { // Layer 2
 //          display-name = "Cymbal";
 //          bindings = <
