@@ -8,12 +8,13 @@
   #include <behaviors.dtsi>
   #include <dt-bindings/zmk/keys.h>
 
-  // Set diode direction to the direction the dactyl pcb uses
-  kscan0: kscan {
-    diode-direction = "row2col";
-  }
-
   / {
+    // Set diode direction to the direction the dactyl pcb uses
+    kscan0: kscan {
+      compatible = "zmk,kscan-gpio-matrix";
+      diode-direction = "row2col";
+    };
+
     keymap {
       compatible = "zmk,keymap";
   default_layer { // Layer 0
