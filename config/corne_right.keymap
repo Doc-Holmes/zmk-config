@@ -1,0 +1,6 @@
+#include "corne.keymap"
+
+&dactyl_transform {
+  col-offset = <6>;
+}
+
