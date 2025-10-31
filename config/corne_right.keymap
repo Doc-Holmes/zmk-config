@@ -1,4 +1,4 @@
-#include "corne.keymap"
+#include "../boards/shields/dorne/dorne_dongle.overlay"
 
 &dactyl_transform {
   col-offset = <6>;
