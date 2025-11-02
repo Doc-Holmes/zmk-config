@@ -6,6 +6,6 @@
 
 #include "dorne.dtsi"
 
-&default_transform {
+&dactyl_transform {
     col-offset = <6>;
 };
