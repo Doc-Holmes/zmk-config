@@ -3,7 +3,7 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &dactyl_transform;
+        zmk,matrix-transform = &dactyl_transform;
     };
 
     dactyl_transform: matrix_transform {
