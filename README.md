@@ -1,0 +1,11 @@
+# TODO
+- Sleep
+- Bluetooth operations
+    - Pairing mode
+    - Change connected device
+- Display (e.g. nice!view)
+    - Show active layer
+    - Animation
+        - Bongo cat
+        - Luna dog
+    - WPM
