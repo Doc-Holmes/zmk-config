@@ -3,6 +3,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/matrix_transform.h>
 
+#define NAVIGATION 1
+#define SYMBOL 2
+#define OS 3
+
 / {
     chosen {
         zmk,kscan = &kscan0;
@@ -14,20 +18,20 @@
       default_layer { // Layer 0
           display-name = "Base";
           bindings = <
-            &kp TAB          &kp Q &kp W &kp F          &kp P     &kp B &kp J &kp L     &kp U         &kp Y   &kp SEMICOLON &kp BACKSPACE
-            &kp ESCAPE       &kp A &kp R &kp S          &kp T     &kp G &kp M &kp N     &kp E         &kp I   &kp O         &kp DELETE
-            &kp LEFT_CONTROL &kp Z &kp X &kp C          &kp D     &kp V &kp K &kp H     &kp COMMA     &kp DOT &kp MINUS     &kp LEFT_ALT
-                                         &kp LEFT_SHIFT &kp ENTER &mo 2 &mo 1 &kp SPACE &kp RIGHT_GUI
+            &kp TAB          &kp Q &kp W &kp F          &kp P     &kp B &kp J &kp L          &kp U         &kp Y   &kp SEMICOLON &kp BACKSPACE
+            &kp ESCAPE       &kp A &kp R &kp S          &kp T     &kp G &kp M &kp N          &kp E         &kp I   &kp O         &kp DELETE
+            &kp LEFT_CONTROL &kp Z &kp X &kp C          &kp D     &kp V &kp K &kp H          &kp COMMA     &kp DOT &kp MINUS     &kp LEFT_ALT
+                                         &kp LEFT_SHIFT &kp ENTER &mo SYMBOL  &mo NAVIGATION &kp SPACE &kp RIGHT_GUI
           >;
         };
 
       navigation { // Layer 1
           display-name = "Navigation";
           bindings = <
-            &none            &none     &none             &kp HOME       &kp PAGE_UP   &none &kp CARET &none    &none  &kp DOLLAR &none &kp BACKSPACE
-            &none            &kp TILDE &kp DOUBLE_QUOTES &kp END        &kp PAGE_DOWN &none &kp LEFT  &kp DOWN &kp UP &kp RIGHT  &none &kp DELETE
-            &kp LEFT_CONTROL &none     &none             &kp LEFT_SHIFT &kp LEFT_GUI  &none &none     &none    &none  &none      &none &none
-                                                         &kp SPACE      &kp ENTER     &mo 3 &trans    &none    &none
+            &none            &none     &none             &kp HOME       &kp PAGE_UP   &none  &kp CARET &none    &none  &kp DOLLAR &none &kp BACKSPACE
+            &none            &kp TILDE &kp DOUBLE_QUOTES &kp END        &kp PAGE_DOWN &none  &kp LEFT  &kp DOWN &kp UP &kp RIGHT  &none &kp DELETE
+            &kp LEFT_CONTROL &none     &none             &kp LEFT_SHIFT &kp LEFT_GUI  &none  &none     &none    &none  &none      &none &none
+                                                         &kp SPACE      &kp ENTER     &mo OS &trans    &none    &none
           >;
         };
 
@@ -37,7 +41,7 @@
             &kp CARET      &kp N1    &kp N2         &kp N3           &kp N4               &kp N5      &kp N6   &kp N7                &kp N8            &kp N9          &kp N0        &kp BACKSPACE
             &kp PLUS       &kp SLASH &kp LEFT_BRACE &kp LEFT_BRACKET &kp LEFT_PARENTHESIS &kp LT      &kp GT   &kp RIGHT_PARENTHESIS &kp RIGHT_BRACKET &kp RIGHT_BRACE &kp BACKSLASH &kp SINGLE_QUOTE
             &kp LEFT_SHIFT &kp EXCL  &kp ASTRK      &kp GRAVE        &kp DOLLAR           &kp PERCENT &kp AMPS &kp QUESTION          &kp HASH          &kp PIPE        &kp AT        &kp EQUAL
-                                                    &none            &none                &trans      &mo 3    &kp SPACE             &kp LEFT_CONTROL
+                                                    &none            &none                &trans      &mo OS   &kp SPACE             &kp LEFT_CONTROL
           >;
         };
 
@@ -46,7 +50,7 @@
           bindings = <
             &kp F1 &kp F2               &kp F3               &kp F4              &kp F5           &kp F6 &kp F7         &kp F8           &kp F9            &kp F10 &kp F11 &kp F12
             &none  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC &kp C_AC_BACK       &kp C_AC_FORWARD &none  &kp C_NEXT     &kp C_PLAY_PAUSE &kp C_MUTE        &none   &none   &none
-            &none  &none                &none                &kp C_AL_CALCULATOR &none            &none  &kp C_PREVIOUS &kp C_VOLUME_UP  &kp C_VOLUME_DOWN &tog 4  &tog 5  &tog 6
+            &none  &none                &bt BT_CLR           &bt BT_PRV          &bt BT_NXT       &none  &kp C_PREVIOUS &kp C_VOLUME_UP  &kp C_VOLUME_DOWN &none   &none   &none
                                                              &none               &none            &trans &trans         &none            &none
           >;
         };
